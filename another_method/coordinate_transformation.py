@@ -17,16 +17,16 @@ import requests, json
 from kml_to_xml import *
 from xml_to_json import *
 
+kml_file = "ocak.kml"
+f_name = kml_file.split(".")[0]
+# kml_to_xml(os.path.join(os.getcwd(), f"{f_name}.kml"))
+# xml_to_json(os.path.join(os.getcwd(), f"{f_name}.xml"))
 
-
-# kml_to_xml(os.path.join(os.getcwd(), "ocak_koordinatları.kml"))
-# xml_to_json(os.path.join(os.getcwd(), "ocak_koordinatları.xml"))
-
-with open('ocak_koordinatları.json') as json_file:
-    data = json.load(json_file)
+# with open(f"{f_name}.json") as json_file:
+#     data = json.load(json_file)
 # print(data)
-
-coord = data['kml']['Document']['Folder']['Placemark'][-1]['Polygon']['outerBoundaryIs']['LinearRing']['coordinates']
+file = open("ocak.kml", "r+")
+coord = file.read().split("<coordinates>")[1].split("</coordinates>")[0].strip()
 coord = [c for c in coord.split(",0") if c != ""]
 print(coord)
 file = open("coordinate.txt", "w+")
@@ -43,6 +43,7 @@ except FileNotFoundError:
 zones = [23035, 23036, 23037,23038] # UTM-ZONES
 
 s_srs = 4326
+
 t_srs = 23036
 
 file.seek(0) #The top row operation in the coordinate.txt file.

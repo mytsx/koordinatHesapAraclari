@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>ocak.kml</name>
+	<Style id="0">
+		<BalloonStyle>
+			<text><![CDATA[<b>$[name]<b/><br />$[description]]]></text>
+			<bgColor>ffe1ffff</bgColor>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff0000</color>
+		</PolyStyle>
+	</Style>
+	<Placemark id="#8">
+		<name>1</name>
+		<LookAt>
+			<longitude>34.74505945720799</longitude>
+			<latitude>37.94715143141228</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>45</tilt>
+			<range>476.2616954573673</range>
+		</LookAt>
+		<styleUrl>#0</styleUrl>
+		<Style>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<gx:balloonVisibility>1</gx:balloonVisibility>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						34.74438707266386,37.95004226164669,0 34.74620956220372,37.94962770732636,0 34.74613562649268,37.94602404889023,0 34.7465906726874,37.94601729276115,0 34.74654907757348,37.94426059117788,0 34.74473213134179,37.94442273448536,0 34.74352824172858,37.94885641418389,0 34.74438707266386,37.95004226164669,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
